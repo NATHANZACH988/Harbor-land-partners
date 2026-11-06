@@ -1,0 +1,17 @@
+name: Validate website
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  static-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check website structure, links and forms
+        run: python3 -m unittest discover -s tests -v
+      - name: Check browser JavaScript syntax
+        run: |
+          node --check script.js
+          node --check config.js
