@@ -1,0 +1,6 @@
+# Root-level static site. Netlify detects the form by parsing index.html at deploy.
+[build]
+  publish = "."
+
+# This is a temporary preview deployment, not yet the verified production domain.
+# Before public marketing, review privacy, contact and compliance disclosures.
