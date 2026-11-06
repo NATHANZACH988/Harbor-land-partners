@@ -1,0 +1,13 @@
+# Do not commit credentials or local environment
+.env
+.env.*
+!.env.example
+.netlify/
+node_modules/
+coverage/
+.pytest_cache/
+__pycache__/
+*.pyc
+.DS_Store
+*.log
+*.zip
